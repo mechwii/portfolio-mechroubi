@@ -1,6 +1,6 @@
 "use client"
 import {Navbar} from "@/app/components/ui/navbar";
-import {Experience_card} from "@/app/components/categorie_exp/experience_card.tsx"
+import {Experience_card} from "@/app/components/categorie_exp/experience_card"
 import Link from "next/link";
 
 

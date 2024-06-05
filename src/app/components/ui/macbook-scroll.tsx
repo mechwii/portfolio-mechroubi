@@ -50,6 +50,8 @@ export const MacbookScroll = ({
                 return 830;
             }
 
+        } else{
+            return 830
         }
 
     }
@@ -88,6 +90,7 @@ export const MacbookScroll = ({
         [0.6, isMobile ? 1.8 : 1.5]
     );
     const translate = useTransform(scrollYProgress, [0, 0.4], [0, screenWidth]); //before 830
+
     const rotate = useTransform(
         scrollYProgress,
         [0.1, 0.12, 0.25],

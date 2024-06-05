@@ -7,7 +7,7 @@ import React, {useState} from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import {Variants} from "framer-motion";
-import {motion} from "framer-motion";
+import {motion, PanInfo} from "framer-motion";
 
 
 //             <div className="mt-16 md:mt-4 sm:px-20 lg:px-52 pb-32">
@@ -30,7 +30,7 @@ const images = [
 const DraggableImage: React.FC<{ src: string; alt: string; width: number; height: number; x: number; y: number }> = ({ src, alt, width, height, x, y }) => {
     const [position, setPosition] = useState({ x, y });
 
-    const handleDragEnd = (event, info) => {
+    const handleDragEnd = (event : Event, info: PanInfo) => {
         const newPosition = { x: info.point.x, y: info.point.y };
         setPosition(newPosition);
     };
