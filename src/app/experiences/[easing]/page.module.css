@@ -1,0 +1,21 @@
+.entreprise_presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entreprise_top{
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+}
+
+.entreprise_bottom{
+    background-color: white;
+    height: 300px;
+    width: 4px;
+
+}
+
+

@@ -1,0 +1,38 @@
+# dépendances de développement
+node_modules/
+
+# fichiers de build et de cache
+.next/
+build/
+out/
+dist/
+
+# fichiers de configuration et de sauvegarde IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iwi
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# fichiers de logs et de rapport d'erreur
+logs/
+*.log
+*.swp
+*.un~
+error-report.log*
+
+# fichiers temporaires
+tmp/
+temp/
+*.tmp
+
+# autres
+coverage/
+nyc_output/
+DumpStack*.log
+profile-*
