@@ -8,7 +8,7 @@ const experiences = [{date:"08 avril 2024 - 29 juin 2024", nomExp : "Développeu
 
 export default function Home(){
     return (
-        <main className="w-screen h-screen overflow-x-hidden">
+        <main className="w-screen h-screen overflow-x-hidden bg-white text-black">
             <Navbar></Navbar>
                 <h1 className="text-center mt-16 w-full ml-100 font-bold text-7xl text-[#6665DD]">Expériences</h1>
 

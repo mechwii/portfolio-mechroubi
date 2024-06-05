@@ -33,12 +33,13 @@ const DraggableImage: React.FC<{ src: string; alt: string; width: number; height
     const handleDragEnd = (event : Event, info: PanInfo) => {
         const newPosition = { x: info.point.x, y: info.point.y };
         setPosition(newPosition);
+
     };
 
     return (
         <motion.div
             drag
-            dragConstraints={{ left: 0, right: 1300 - width, top: 0, bottom: 800 - height }}
+            dragConstraints={{ left: 0, right: 1100 - width, top: 0, bottom: 780 - height }}
             dragElastic={0.2}
             style={{ x: position.x, y: position.y }}
             onDragEnd={handleDragEnd}
@@ -75,12 +76,12 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
 
 
     return (
-        <div className="overflow-x-hidden overflow-y-hidden">
+        <div className="overflow-x-hidden overflow-y-hidden bg-white text-black">
             <Navbar/>
             <p className="text-7xl text-center my-16">
                 Parlons un peu de <span className="font-bold text-[#6665DD]">Easing !</span>
             </p>
-            <div className="relative">
+            <div className="relative mb-[500px]">
                 <MacbookScroll></MacbookScroll>
             </div>
             <div
@@ -142,16 +143,16 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 </div>
             </div>
 
-            <div className=" my-16 bg-[#6665DD] w-screen px-44 py-8 space-y-12">
+            <div className=" my-16 bg-[#6665DD] w-screen px-[200px] py-8 space-y-12">
                     <h1 className="text-6xl text-white font-bold">Technologies utilisées</h1>
                     <h1 className="text-3xl text-white">Essayez d'attraper une technologie et de la bouger.</h1>
 
-                <div className="bg-white m-auto w-[1300px] h-[800px] rounded-3xl relative overflow-hidden">  {images.map((image, index) => (
+                <div className="bg-white m-auto w-[1100px] h-[800px] rounded-3xl relative overflow-hidden">  {images.map((image, index) => (
                     <DraggableImage
                         src={image.src}
                         alt={`Image ${index + 1}`}
-                        width={270}
-                        height={270}
+                        width={250}
+                        height={250}
                         x={image.x}
                         y={image.y}
                     />
