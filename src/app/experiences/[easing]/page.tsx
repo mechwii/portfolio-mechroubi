@@ -278,7 +278,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 </div>
             </div>
 
-            <div className="w-full h-[600px] bg-[#6665DD]">
+            <div style={{marginTop: isOpen.menu1 ? '45%' : '0'}} className="w-full h-[600px] bg-[#6665DD]">
 
             </div>
 
