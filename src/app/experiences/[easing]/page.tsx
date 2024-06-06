@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import {Variants} from "framer-motion";
 import {motion, PanInfo} from "framer-motion";
-
+import {Fenetre} from "@/app/components/ui/fenetre";
 
 //             <div className="mt-16 md:mt-4 sm:px-20 lg:px-52 pb-32">
 
@@ -54,12 +54,12 @@ const Menu: React.FC<MenuProps> = ({ title, items, isOpen, color, onToggle }) =>
             initial={false}
             animate={isOpen ? "open" : "closed"}
             style={{ backgroundColor: color }}
-            className="menu w-[1000px] h-[130px] rounded-3xl text-white my-12"
+            className="menu w-[1000px] h-[200px] rounded-3xl text-white my-12"
         >
             <motion.button
                 whileTap={{ scale: 0.97 }}
                 onClick={onToggle}
-                className="w-full h-full flex items-center justify-center space-x-12 font-bold px-4 text-2xl"
+                className="w-full h-full flex items-center justify-center space-x-12 font-bold px-4 text-3xl"
             >
                 {title}
                 <motion.div
@@ -157,7 +157,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
         triggerOnce: true,
         rootMargin: "-100px 0px",
     });
-    
+
 
     const container: Variants = {
         hidden: { opacity: 0, y: 100 },
@@ -257,8 +257,8 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 </div>
             </div>
             <div className="mx-44 my-8 h-[900px] ">
-                <h1 className="text-6xl  text-[#6665DD] font-bold ">Compétences sollicitées</h1>
-                <div className="flex-col space-x-72">
+                <h1 className="text-6xl  text-[#6665DD] font-bold pb-8 ">Compétences sollicitées</h1>
+                <div className="flex-col space-x-[25vw] justify-center">
                     <Menu
                         title="Réaliser un développement d’application"
                         items={c1}
@@ -266,7 +266,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                         color="#6665DD"
                         onToggle={() => handleToggle('menu1')}
                     />
-                    <div style={{marginTop: isOpen.menu1 ? '45%' : '0'}}>
+                    <div style={{marginTop: isOpen.menu1 ? '35%' : '7%'}}>
                         <Menu
                             title="Optimiser des applications"
                             items={c2}
@@ -277,10 +277,11 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                     </div>
                 </div>
             </div>
-
-            <div style={{marginTop: isOpen.menu1 ? '45%' : '0'}} className="w-full h-[600px] bg-[#6665DD]">
-
+            <div style={{marginTop: isOpen.menu1 ? '28%' : '15%'}} className="w-full h-[1200px] text-center bg-[#6665DD]  px-[200px] py-8 space-y-12">
+                <h1 className="text-6xl  text-white font-bold ">Tâches accomplies</h1>
+                <Fenetre></Fenetre>
             </div>
+            <p>Oui</p>
 
         </div>
     );
