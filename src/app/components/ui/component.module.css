@@ -24,3 +24,30 @@
     left: 10px;
     transform: scale(-1);
 }
+
+.nameFooter::after{
+    content: " ";
+    position: absolute;
+    top: 120px;
+    margin: 0 30%;
+    background-color: white;
+    height: 200px;
+    width: 2px;
+}
+
+.contentFooter::after{
+    content: " ";
+    display: block;
+    margin-top: 5px;
+    position: absolute;
+    height: 2px;
+    width: 150px;
+    background-color: white;
+}
+
+@media (max-width: 1680px) {
+    .nameFooter::after{
+        margin: 0 23%;
+    }
+
+}

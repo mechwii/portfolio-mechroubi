@@ -9,6 +9,10 @@ import { useInView } from "react-intersection-observer";
 import {Variants} from "framer-motion";
 import {motion, PanInfo} from "framer-motion";
 import {Fenetre} from "@/app/components/ui/fenetre";
+import { FaGithub } from "react-icons/fa";
+import { FaDocker } from "react-icons/fa";
+import {Footer} from "@/app/components/ui/footer";
+
 
 //             <div className="mt-16 md:mt-4 sm:px-20 lg:px-52 pb-32">
 
@@ -256,7 +260,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 ))}
                 </div>
             </div>
-            <div className="mx-44 my-8 h-[900px] ">
+            <div className="mx-44 mb-28">
                 <h1 className="text-6xl  text-[#6665DD] font-bold pb-8 ">Compétences sollicitées</h1>
                 <div className="flex-col space-x-[25vw] justify-center">
                     <Menu
@@ -277,12 +281,29 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                     </div>
                 </div>
             </div>
-            <div style={{marginTop: isOpen.menu1 ? '28%' : '15%'}} className="w-full h-[1200px] text-center bg-[#6665DD]  px-[200px] py-8 space-y-12">
+            <div style={{marginTop: isOpen.menu1 ? '28%' : '0'}} className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-8 space-y-12">
                 <h1 className="text-6xl  text-white font-bold ">Tâches accomplies</h1>
                 <Fenetre></Fenetre>
             </div>
-            <p>Oui</p>
+            <div className="mx-44 mt-12">
+                <h1 className=" text-6xl text-center  text-[#6665DD] font-bold pb-8 ">Accéder au projet</h1>
 
+                <div className="mt-16 space-y-12 items-center mx-44">
+
+                    <a className="flex space-x-8 px-8 py-8 bg-gray-600 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75" href="https://github.com/mhammeDev/EASING" target="_blank">
+                        <FaGithub/>
+                        <p className="e ">Github</p>
+                    </a>
+
+                        <a className="flex space-x-8 px-8 py-8 bg-blue-700 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75" href="https://hub.docker.com/repository/docker/mhammedev/easingproject/" target="_blank">
+                            <FaDocker/>
+                            <p className="text-3xl text-white ">Docker</p>
+                        </a>
+
+                </div>
+
+            </div>
+            <Footer/>
         </div>
     );
 };

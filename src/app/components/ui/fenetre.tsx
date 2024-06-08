@@ -12,9 +12,12 @@ const images = [
 ];
 
 const items = ["AC 1.1 Implémenter des conceptions simples", 'AC 1.2 Élaborer des conceptions simples', "AC 1.3 Faire des essais et évaluer leurs résultats en regard des spécifications", "AC 1.4 Développer des interfaces utilisateurs", "AC 2.1 Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences", "AC 2.2 Appliquer des principes d’accessibilité et d’ergonomie", "AC 2.3 Adopter de bonnes pratiques de conception et de programmation", "AC 2.4 Vérifier et valider la qualité de l’application par les tests"]
+const items2 = ["AC 1.1 Implémenter des conceptions simples", 'AC 1.2 Élaborer des conceptions simples', "AC 1.3 Faire des essais et évaluer leurs résultats en regard des spécifications"]
+
 
 interface RectangleProps {
     id: number;
+    name: string;
     onClick: (id: number) => void;
 }
 
@@ -125,21 +128,30 @@ const ImageSlider: React.FC = () => {
     );
 };
 
-const Rectangle: React.FC<RectangleProps> = ({ id, onClick }) => (
+const Rectangle: React.FC<RectangleProps> = ({ id, name, onClick }) => (
     <motion.div
-        className="w-[480px] h-[180px] bg-white rounded-lg flex items-center justify-center cursor-pointer shadow-md text-2xl"
+        className="w-[480px] h-[180px] px-12 bg-white rounded-lg flex items-center justify-center cursor-pointer shadow-md text-2xl"
         onClick={() => onClick(id)}
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
     >
-        Tâche {id} : Les cramptés
+        {name}
     </motion.div>
 );
 
 export const Fenetre: React.FC = () => {
     const [selectedId, setSelectedId] = useState<number | null>(null);
-    const data = Array.from({ length: 8 }, (_, i) => i + 1);
+    const data = [
+        {id:0, title: "Mise en place du front end"},
+        {id:1, title: "Conception et développement d’une carte interactive"},
+        {id:2, title: "Modélisation de la base de donnée"},
+        {id: 3, title: "Mise en place du backend"},
+        {id:4, title: "Améliorer les résultats retournés par l'IA"},
+        {id:5, title: "Développement d’un chatbot"},
+        {id:6, title: "Mise en place d’un système d’authentification sécurisé"},
+        {id:7, title: "Dockerisation de l'application"},
+    ]
 
     const handleClick = (id: number) => {
         setSelectedId(id);
@@ -152,8 +164,9 @@ export const Fenetre: React.FC = () => {
     return (
         <div className="flex flex-col items-center">
             <div className="grid grid-cols-2 gap-x-16 gap-y-12">
-                {data.map((id) => (
-                    <Rectangle key={id} id={id} onClick={handleClick} />
+
+                {data.map((item, index) => (
+                    <Rectangle key={item.id} id={item.id} name={item.title} onClick={handleClick} />
                 ))}
             </div>
 
@@ -174,7 +187,7 @@ export const Fenetre: React.FC = () => {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="bg-gray-800 text-white p-4 flex justify-between items-center rounded-t-3xl  ">
-                                <h2 className="text-lg">Mise en place du front-end</h2>
+                                <h2 className="text-lg">{data[selectedId].title}</h2>
                                 <button onClick={handleClose}>
                                     <MdCancel className="h-6 w-6 text-red-500" />
                                 </button>
@@ -213,11 +226,55 @@ export const Fenetre: React.FC = () => {
                                         </motion.ul>
 
                                     </div>
-                                    <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-                                            onClick={handleClose}>
-                                        Fermer
-                                    </button>
+                                </div>
 
+
+                                <div className="bg-[rgb(102,102,221,85%)] py-8">
+                                        <h1 className="text-start text-3xl font-bold text-white px-6">Difficultés</h1>
+                                        <motion.ul
+                                            variants={listVariants}
+                                            initial="closed"
+                                            animate="open"
+                                            exit="closed"
+                                            className="text-start text-xl px-12 py-8 space-y-4 overflow-y-auto flex-grow"
+                                        >
+                                            {items2.map((item, index) => (
+                                                <motion.li key={index} variants={itemVariants}
+                                                           className="p-2 bg-white rounded-lg shadow-sm">
+                                                    {item}
+                                                </motion.li>
+                                            ))}
+                                        </motion.ul>
+
+                                    </div>
+                                <div className="px-6 mb-6 ">
+
+                                    <h1 className="text-start text-3xl font-bold text-[#6665DD] py-8">Compétences sollicités</h1>
+                                        <motion.ul
+                                            variants={listVariants}
+                                            initial="closed"
+                                            animate="open"
+                                            exit="closed"
+                                            className="text-start text-xl px-12 space-y-4 overflow-y-auto flex-grow"
+                                        >
+                                            <p className="ml-[-1.3vw] text-[#6665DD] font-bold text-2xl">Compétence 1 :</p>
+                                            {items.map((item, index) => (
+                                                <motion.li key={index} variants={itemVariants}
+                                                           className="p-2 bg-[#6665DD] text-white rounded-lg shadow-sm">
+                                                    {item}
+                                                </motion.li>
+                                            ))}
+
+                                            <p className="font-bold text-[rgb(102,102,221,85%)] ml-[-1.3vw] pt-8 text-2xl">Compétence
+                                                2</p>
+
+                                            {items2.map((item, index) => (
+                                                <motion.li key={index} variants={itemVariants}
+                                                           className="p-2 bg-[rgb(102,102,221,85%)] text-white rounded-lg shadow-sm">
+                                                    {item}
+                                                </motion.li>
+                                            ))}
+                                        </motion.ul>
                                 </div>
 
                             </div>
