@@ -166,12 +166,12 @@ export const Fenetre: React.FC = () => {
             <div className="grid grid-cols-2 gap-x-16 gap-y-12">
 
                 {data.map((item, index) => (
-                    <Rectangle key={item.id} id={item.id} name={item.title} onClick={handleClick} />
+                    <Rectangle key={item.id + 1} id={item.id} name={item.title} onClick={handleClick} />
                 ))}
             </div>
 
             <AnimatePresence>
-                {selectedId && (
+                {selectedId !== null && (
                     <motion.div
                         className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
                         initial={{ opacity: 0 }}
