@@ -12,6 +12,7 @@ import {Fenetre} from "@/app/components/ui/fenetre";
 import { FaGithub } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
 import {Footer} from "@/app/components/ui/footer";
+import {Chatbot} from "@/app/components/ui/chatbot";
 
 
 //             <div className="mt-16 md:mt-4 sm:px-20 lg:px-52 pb-32">
@@ -178,6 +179,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
     return (
         <div className="overflow-x-hidden overflow-y-hidden bg-white text-black">
             <Navbar/>
+            <Chatbot></Chatbot>
             <p className="text-7xl text-center my-16">
                 Parlons un peu de <span className="font-bold text-[#6665DD]">Easing !</span>
             </p>
@@ -281,7 +283,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                     </div>
                 </div>
             </div>
-            <div style={{marginTop: isOpen.menu1 ? '28%' : '0'}} className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-8 space-y-12">
+            <div style={{marginTop: isOpen.menu1 ? '28%' : '0'}} className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-10 space-y-12">
                 <h1 className="text-6xl  text-white font-bold ">Tâches accomplies</h1>
                 <Fenetre></Fenetre>
             </div>

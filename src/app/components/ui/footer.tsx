@@ -13,7 +13,7 @@ import {Logo} from "@/app/components/ui/logo";
 
 export const Footer = (() => {
     return (
-        <div className="overflow-x-hidden bg-white w-full">
+        <div className="relative z-[400] overflow-x-hidden bg-white w-full">
 
                 <Image
                     className=" relative z-10 mb-[-80px] w-full h-1/5"
@@ -78,7 +78,7 @@ export const Footer = (() => {
                 </div>
             </div>
 
-            <div className="w-full bg-[#24272B] text-white text-lg py-1 border-t-2 border-gray-100-">
+            <div className="w-full bg-[#24272B] text-white text-lg py-1 border-t-2 border-gray-100">
                 <p className="text-center">Ce site a été fait par M'hammed MECHROUBI en Next, avec l'utilisation du type script.</p>
 
             </div>
