@@ -101,17 +101,18 @@ const Rectangle: React.FC<RectangleProps> = ({ id, name, onClick }) => (
 );
 
 export const Fenetre: React.FC = () => {
-    const [selectedId, setSelectedId] = useState<number | null>(null);
+    const [selectedId, setSelectedId] = useState(-1);
 
     const handleClick = (id: number) => {
         setSelectedId(id);
     };
 
     const handleClose = () => {
-        setSelectedId(null);
+        setSelectedId(-1);
     };
 
     const [[page, direction], setPage] = useState([0, 0]);
+
 
     const imageIndex = wrap(0, data[selectedId] ? data[selectedId].images.length :  3, page); //put image max
 
@@ -129,7 +130,7 @@ export const Fenetre: React.FC = () => {
             </div>
 
             <AnimatePresence>
-                {selectedId !== null && (
+                {selectedId !== -1 && (
                     <motion.div
                         className="fixed z-[1000] inset-0 bg-black bg-opacity-50 flex items-center justify-center"
                         initial={{ opacity: 0 }}

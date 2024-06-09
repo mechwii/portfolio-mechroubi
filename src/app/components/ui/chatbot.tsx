@@ -2,15 +2,21 @@
 import { TbMessageCircle2Filled } from "react-icons/tb";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import styles from "./component.module.css"
 import Image from "next/image";
+import styles from "@/app/components/ui/component.module.css";
+
+// Définir un type pour les messages
+type Message = {
+    expediteur: string;
+    text: string;
+};
 
 export const Chatbot = () => {
     const [showChat, setShowChat] = useState(false);
-    const [tableMessage, setTableMessage] = useState([]);
+    const [tableMessage, setTableMessage] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    const messages = [
+    const messages: Message[] = [
         { expediteur: "me", text: "Qu’as tu pensé de ce stage ?" },
         { expediteur: "Momo", text: "J’ai beaucoup aimé ce stage, on peut dire que c’est ma meilleure expérience de stage (après c’est la seule). J’ai particulièrement aimé ce stage puisque dans un premier temps je devais faire preuve d’autonomie la plupart du temps, cela m'a permis de travailler sur cela mais aussi de faire parler ma créativité. En plus de cela je trouvais le sujet vraiment intéressant donc j’ai pris du plaisir a réalisé les missions qui m’ont été confiées. Même si je n’ai pas vraiment ressenti l’aspect entreprise, l’atmosphère avec mon tuteur, l' enseignant et les autres élèves était vraiment bonne." },
         { expediteur: "me", text: "Ce stage t’as t’il été bénéfique ? Et qu’as tu appris ?" },
