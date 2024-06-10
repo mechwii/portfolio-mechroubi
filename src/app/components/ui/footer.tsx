@@ -79,7 +79,7 @@ export const Footer = (() => {
             </div>
 
             <div className="w-full bg-[#24272B] text-white text-lg py-1 border-t-2 border-gray-100">
-                <p className="text-center">Ce site a été fait par M'hammed MECHROUBI en Next, avec l'utilisation du type script.</p>
+                <p className="text-center">Ce site a été fait par M'hammed MECHROUBI en Next, avec l'utilisation de TypeScript.</p>
 
             </div>
 

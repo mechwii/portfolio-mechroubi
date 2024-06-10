@@ -283,7 +283,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                     </div>
                 </div>
             </div>
-            <div style={{marginTop: isOpen.menu1 ? '28%' : '0'}} className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-10 space-y-12">
+            <div style={{marginTop: isOpen.menu2 ? '28%' : '0'}} className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-10 space-y-12">
                 <h1 className="text-6xl  text-white font-bold ">Tâches accomplies</h1>
                 <Fenetre></Fenetre>
             </div>
