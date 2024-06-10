@@ -1,6 +1,7 @@
 "use client";
 import { TbMessageCircle2Filled } from "react-icons/tb";
 import React, { useState, useEffect } from "react";
+import { MdCancel } from "react-icons/md";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "@/app/components/ui/component.module.css";
@@ -13,11 +14,10 @@ type Message = {
 
 export const Chatbot = () => {
     const [showChat, setShowChat] = useState(false);
-    const [tableMessage, setTableMessage] = useState<Message[]>([]);
+    const [tableMessage, setTableMessage] = useState<Message[]>([  { expediteur: "me", text: "Qu’as tu pensé de ce stage ?" }]);
     const [isLoading, setIsLoading] = useState(false);
 
     const messages: Message[] = [
-        { expediteur: "me", text: "Qu’as tu pensé de ce stage ?" },
         { expediteur: "Momo", text: "J’ai beaucoup aimé ce stage, on peut dire que c’est ma meilleure expérience de stage (après c’est la seule). J’ai particulièrement aimé ce stage puisque dans un premier temps je devais faire preuve d’autonomie la plupart du temps, cela m'a permis de travailler sur cela mais aussi de faire parler ma créativité. En plus de cela je trouvais le sujet vraiment intéressant donc j’ai pris du plaisir a réalisé les missions qui m’ont été confiées. Même si je n’ai pas vraiment ressenti l’aspect entreprise, l’atmosphère avec mon tuteur, l' enseignant et les autres élèves était vraiment bonne." },
         { expediteur: "me", text: "Ce stage t’as t’il été bénéfique ? Et qu’as tu appris ?" },
         { expediteur: "Momo", text: "Oui ce stage m’a beaucoup été bénéfique puisque dans un premier temps puisque j’ai du concevoir la solution de A à Z j’ai pu renforcer mes compétences que j’avais déjà, mais en plus de ça je me suis plongé dans des “choses” que je ne connaissais pas faisant des docs mes meilleurs amis, j’ai pu comprendre en bref le prompt engineering mais aussi docker et encore pleins de choses, des notions qu’on aborde pas forcément maintenant." },
@@ -30,6 +30,7 @@ export const Chatbot = () => {
     ];
 
     useEffect(() => {
+
         const addMessages = async () => {
             for (const message of messages) {
                 if (message.expediteur === "Momo") {
@@ -46,8 +47,13 @@ export const Chatbot = () => {
             }
         };
 
-        addMessages();
-    }, []); // Tableau de dépendances vide pour exécuter une seule fois
+        if(showChat){
+            addMessages();
+
+        }
+
+
+    }, [showChat]); // Tableau de dépendances vide pour exécuter une seule fois
 
     const setChat = () => {
         setShowChat(!showChat);
@@ -57,17 +63,20 @@ export const Chatbot = () => {
         <div className="fixed right-12 bottom-12 z-[100]">
             {showChat && (
                 <motion.div
-                    className="h-[430px] w-[280px] absolute"
+                    className="h-[430px] w-[280px] absolute z-[1000]"
                     initial={{ opacity: 0, y: 700, x: -250 }}
                     animate={{ opacity: 1, y: -440, x: -250 }}
                     exit={{ opacity: 0, y: 0 }}
                     transition={{ duration: 0.8, type: "spring" }}
                 >
-                    <div className="bg-[#473BF0] w-full text-center py-1 rounded-t-xl text-lg text-white font-bold">
+                    <div className="bg-[#473BF0] w-full px-4 py-1 rounded-t-xl text-lg text-white flex items-center justify-between">
                         <p>M'hammed</p>
+                        <div className="hover:cursor-pointer" onClick={setChat}>
+                            <MdCancel></MdCancel>
+                        </div>
                     </div>
 
-                    <div className="bg-white h-full overflow-y-scroll border-2 text-start border-[#473BF0] rounded-b-2xl px-4 py-4">
+                    <div className="bg-white h-full overflow-y-scroll border-2 text-start border-gray-300 rounded-b-2xl px-4 py-4">
                         {tableMessage.map((message, index) => (
                             <div className="space-y-4" key={index}>
                                 {message.expediteur === "me" && (

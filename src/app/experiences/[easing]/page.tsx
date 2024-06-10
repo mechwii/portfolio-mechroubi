@@ -64,7 +64,7 @@ const Menu: React.FC<MenuProps> = ({ title, items, isOpen, color, onToggle }) =>
             <motion.button
                 whileTap={{ scale: 0.97 }}
                 onClick={onToggle}
-                className="w-full h-full flex items-center justify-center space-x-12 font-bold px-4 text-3xl"
+                className="w-full h-full flex items-center justify-between space-x-12 font-bold px-8 text-3xl"
             >
                 {title}
                 <motion.div
@@ -75,7 +75,7 @@ const Menu: React.FC<MenuProps> = ({ title, items, isOpen, color, onToggle }) =>
                     transition={{ duration: 0.2 }}
                     style={{ originY: 0.55 }}
                 >
-                    <svg width="15" height="15" viewBox="0 0 20 20" fill="white">
+                    <svg width="25" height="2ZZ5" viewBox="0 0 20 20" fill="white">
                         <path d="M0 7 L 20 7 L 10 16" />
                     </svg>
                 </motion.div>
