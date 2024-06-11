@@ -23,8 +23,23 @@ interface HomeProps {
     };
 }
 
-const c1 = ["AC 1.1 Implémenter des conceptions simples", 'AC 1.2 Élaborer des conceptions simples', "AC 1.3 Faire des essais et évaluer leurs résultats en regard des spécifications", "AC 1.4 Développer des interfaces utilisateurs", "AC 2.1 Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences", "AC 2.2 Appliquer des principes d’accessibilité et d’ergonomie", "AC 2.3 Adopter de bonnes pratiques de conception et de programmation", "AC 2.4 Vérifier et valider la qualité de l’application par les tests"]
-const c2 = ["AC 1.1 Analyser un problème avec méthode (découpage en éléments algorithmiques simples, structure de données…)", "AC 1.2 Comparer des algorithmes pour des problèmes classiques (tris simples, recherche…)", "AC 1.3 Formaliser et mettre en œuvre des outils mathématiques pour l’informatique", "AC 2.1 Choisir des structures de données complexes adaptées au problème", "AC 2.2 Utiliser des techniques algorithmiques adaptées pour des problèmes complexes (par ex. recherche opérationnelle, méthodes arborescentes, optimisation globale, intelligence artificielle…)", "AC 2.3 Comprendre les enjeux et moyens de sécurisation des données et du code","AC 2.4 Évaluer l’impact environnemental et sociétal des solutions proposées"]
+const c1 = {n1:
+        ["AC 1.1 Implémenter des conceptions simples : Lors de ma mission de développement front-end, j'ai implémenté des conceptions en utilisant Vue.js, en créant des composants réutilisables pour éviter la redondance du code. Par exemple, j'ai conçu des composants pour afficher les paramètres sous forme de rectangles représentant les températures, l’heure et le type de personne. J'ai également créé des icônes spécifiques pour d’autres paramètres(voir tâche : Mise en place du front-end). Ces composants ont été intégrés de manière à garantir que le site soit responsive et fonctionnel sur différents appareils.",
+            'AC 1.2 Élaborer des conceptions simples : Pour élaborer des conceptions simples, j\'ai commencé par créer des maquettes sur Figma. Cela m\'a permis de visualiser et de planifier l\'interface utilisateur avant de commencer le codage (voir tâche : Mise en place du front-end). Ensuite, j’ai travaillé sur la conception du store Pinia, ce qui m\'a permis de gérer efficacement les états de l\'application, notamment les tableaux de données et les fonctions nécessaires pour la carte interactive. En utilisant des frameworks comme Vue.js et Pinia, j\'ai pu créer des structures claires et faciles à maintenir.',
+            "AC 1.3 Faire des essais et évaluer leurs résultats en regard des spécifications : J'ai effectué des tests réguliers pour m'assurer que les fonctionnalités développées répondaient aux spécifications. En particulier, pour la partie fonctionnelle avec l’API, j'ai utilisé le few-shot learning pour améliorer les résultats retournés par l’API GPT (voir tâche : Améliorer les résultats retournés par l’API GPT). Je testais les résultats renvoyés par l’API et les ajustais si nécessaire pour répondre aux besoins du rapport ELLIAD. Pour le front-end, j'ai testé plusieurs frameworks pour vérifier leur adéquation aux besoins du projet, comme l'utilisation de Vuetify (que j’ai du enlever car ce n'était pas pertinent), pour la carte interactive Leaflet où j’ai trouvé plus pertinent d’utiliser vue-konvas car avait + d’options sur le mouvement des figures (voir tâche : conception et développement d’une carte interactive) et Toastify pour les notifications, en remplaçant une API RESTful par des sockets pour une meilleure performance (voir tâche : Mise en place du back-end).",
+            "AC 1.4 Développer des interfaces utilisateurs : J'ai développé des interfaces utilisateurs en utilisant Vue.js, en veillant à ce qu'elles soient intuitives et accessibles. J'ai mis en place des composants visuels pour afficher divers paramètres, ainsi qu'un menu à droite pour représenter les légendes de la carte (voir tâche : conception et développement d’une carte interactive). J'ai appliqué des principes de design responsive pour garantir une interface ergonomique et esthétique. Par exemple, j'ai implémenté une page de login simple (voir tâche : Mise en place d’une authentification sécurisée) et une page principale comprenant divers paramètres ,un footer, une navbar (voir tâche: Mise en place du front-end) et une carte interactive (voir tâche : Conception et développement d’une carte interactive)"],
+    n2 : ["AC 2.1 Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences : J'ai élaboré et mis en œuvre les spécifications fonctionnelles et non fonctionnelles en m'appuyant sur les exigences fournies. Pour la réalisation de la carte interactive, j'ai utilisé le framework Vue-Konva pour reproduire les plans des pièces et les dispositifs présents dans le rapport ELLIAD (voir tâche : Conception et développement d’une carte interactive). En plus de cela, chaque action renvoyée par l’API et interprétée par le front-end.était déduite du rapport ainsi que des différentes réunions avec mon tuteur (voir tâche : Amélioration des résultats retournés par l’IA). Actuellement, je travaille sur la différenciation des actions en fonction des profils utilisateur, suite à une réunion avec l'équipe. De plus, la mise en place du système de login était une exigence directe de mon tuteur.",
+        "AC 2.2 Appliquer des principes d’accessibilité et d’ergonomie : Lors de la conception des interfaces, j'ai accordé une attention particulière aux principes d'accessibilité et d'ergonomie pour garantir une utilisation fluide de l'application par un large public. J'ai optimisé les interfaces en utilisant des icônes explicites et des contrôles intuitifs, et en limitant le nombre d'informations affichées à l'écran pour réduire la complexité (voir tâche : Mise en place du front-end et conception et développement d’une carte interactive). Cette approche a permis d'assurer une expérience utilisateur claire et accessible.",
+        "AC 2.3 Adopter de bonnes pratiques de conception et de programmation : J'ai adopté des bonnes pratiques de conception et de programmation en commentant le code de manière significative et en favorisant la modularité à travers la création de composants réutilisables. Pour éviter la redondance, j'ai optimisé les algorithmes et simplifié les fonctions redondantes (voir tâche : Mise en place du front end et amélioration des résultats retournés par l’IA). Cette approche a non seulement amélioré la lisibilité du code mais a également contribué à l'efficacité et à la maintenabilité de l'application.",
+        "AC 2.4 Vérifier et valider la qualité de l’application par les tests : Bien que je n'aie pas réalisé de tests unitaires ou d'intégration formels, j'ai effectué des tests systématiques à chaque étape du développement. À chaque implémentation, je vérifiais minutieusement les résultats sur la console, et pour les retours de l'API, j'utilisais POSTMAN pour m'assurer de la conformité des données renvoyées (voir tâche : Amélioration des résultats retournés par l’IA et développement d’un chatbot). Bien que ces tests n'étaient pas exhaustifs, ils m'ont permis de valider la qualité de l'application au fur et à mesure de son développement."]}
+const c2 =
+    {n1: ["AC 1.1 Analyser un problème avec méthode (découpage en éléments algorithmiques simples, structure de données…) : Pour aborder les problèmes de manière méthodique, j'ai adopté une approche de découpage en éléments algorithmiques simples. Par exemple, lorsque je me suis confronté à l'interprétation des résultats renvoyés par l’API GPT, j'ai opté pour l'utilisation de tableaux JSON dans le front-end (voir tâche : Mise en place du back end et amélioration des résultats retournés par l’IA). Cette méthode m'a permis de structurer les données de manière à les rendre plus compréhensibles et exploitables dans l'application. De même, pour la création de la carte interactive, j'ai préféré utiliser un tableau JSON NoSQL pour sa flexibilité et sa facilité d'intégration, après une phase de recherche préliminaire (voir tâche : Mise en place de la base de données).",
+            "AC 1.2 Comparer des algorithmes pour des problèmes classiques (tris simples, recherche…) : J'ai réalisé une comparaison approfondie entre différents algorithmes afin d'optimiser les fonctionnalités clés de la carte interactive, notamment pour le zoom et la détection des pièces. Après avoir examiné plusieurs options, j'ai sélectionné les algorithmes les plus efficaces pour garantir les meilleures performances de l'application. Pour le zoom, j'ai simplement ajouté un facteur d'échelle, tandis que pour la détection de pièce, j'ai opté pour une approche basée sur la vérification de l'appartenance du point de dépôt du bonhomme aux coordonnées des pièces, ce qui s'est avéré être une solution efficace (voir tâche : Conception et développement d’une carte interactive).",
+            "AC 1.3 Formaliser et mettre en œuvre des outils mathématiques pour l’informatique : J'ai appliqué des outils mathématiques pour résoudre divers problèmes dans l'application. Par exemple, j'ai utilisé des calculs de coordonnées pour positionner avec précision les icônes des actionneurs sur la carte et pour détecter la pièce dans laquelle le bonhomme était déposé. De plus, j'ai utilisé des concepts mathématiques pour implémenter une fonction de zoom efficace (voir tâche : Conception et développement d’une carte interactive). Cette utilisation judicieuse des outils mathématiques a contribué à la fonctionnalité et à la précision de l'application."],
+    n2 :["AC 2.1 Choisir des structures de données complexes adaptées au problème : Dans le cadre de mon travail, j'ai opté pour des structures de données complexes telles que les tableaux JSON pour stocker les informations sur les pièces et les dispositifs. Cette décision s'est avérée judicieuse car elle m'a permis de manipuler efficacement les données spécifiques à chaque pièce et dispositif (voir tâche : Mise en place de la base de donnée). Contrairement à une base de données relationnelle, l'utilisation de tableaux JSON était plus appropriée dans ce contexte, car chaque pièce possède des dispositifs différents, ce qui rendait la structure flexible et adaptable aux besoins variables de l'application.",
+        "AC 2.2 Utiliser des techniques algorithmiques adaptées pour des problèmes complexes (par ex. recherche opérationnelle, méthodes arborescentes, optimisation globale, intelligence artificielle…) : Pour résoudre des problèmes complexes, j'ai fait appel à des techniques algorithmiques avancées. Par exemple, j'ai conçu un algorithme de zoom spécifique pour la carte interactive, qui offrait à la fois une fonctionnalité précise et des performances optimisées (voir tâche : Conception et développement de la carte interactive). De plus, j'ai optimisé les calculs pour garantir une exécution rapide et efficace de l'application, contribuant ainsi à une expérience utilisateur fluide et réactive. En plus de cela pour le chatbot je devais effectuer un filtre en fonction d’un prompt, trop complexe car on ne peut pas prédire un prompt, j’ai donc utilisé l’API de OPEN AI qui elle a dans un premier temps filtrer les données en fonction du prompt, puis qui a par la suite utilisé ces donnée (voir tâche : Mise en place d’un chatbot).",
+        "AC 2.3 Comprendre les enjeux et moyens de sécurisation des données et du code : J'ai mis en place un système d'authentification sécurisé en utilisant des technologies telles que MySQLite et JWT (JSON Web Tokens). En plus de sécuriser les requêtes REST et Socket, j'ai implémenté des middlewares pour vérifier les tokens, assurant ainsi que seules les requêtes authentifiées étaient autorisées à accéder aux données et aux fonctionnalités de l'application (voir tâche :Mise en place d’une authentification sécurisée). Cette approche a renforcé la sécurité globale du système en protégeant les données sensibles et en prévenant les accès non autorisés.",
+        "AC 2.4 Évaluer l’impact environnemental et sociétal des solutions proposées : Bien que cette compétence n'ait pas été directement intégrée dans mon travail, j'ai pris des mesures pour optimiser les ressources et minimiser l'empreinte environnementale de l'application. Par exemple, j'ai compressé les images et j'ai été attentif à l'efficacité des ressources dans le code, contribuant ainsi à une utilisation plus responsable des ressources numériques. Bien que cette évaluation de l'impact environnemental et sociétal n'ait pas été systématiquement documentée, elle a néanmoins été prise en compte dans le processus de développement pour favoriser une approche durable et responsable.\n"]}
 
 const images = [
     { src: "/img/easing_picture/node.png", x: 0, y: 0 },
@@ -32,11 +47,14 @@ const images = [
     { src: "/img/easing_picture/js.png", x: 400, y: 200 },
     { src: "/img/easing_picture/vue.png", x: 600, y: 300 },
     { src: "/img/easing_picture/docker.png", x: 800, y: 400 },
+    { src: "/img/easing_picture/open_ai.jpg", x: 1000, y: 500 },
+
 ];
 
 type MenuProps = {
     title: string;
-    items: string[];
+    items1: string[];
+    items2: string[];
     isOpen: boolean;
     color:string;
     onToggle: () => void;
@@ -53,7 +71,7 @@ const itemVariants = {
     },
 };
 
-const Menu: React.FC<MenuProps> = ({ title, items, isOpen, color, onToggle }) => {
+const Menu: React.FC<MenuProps> = ({ title, items1, items2, isOpen, color, onToggle }) => {
     return (
         <motion.nav
             initial={false}
@@ -101,11 +119,18 @@ const Menu: React.FC<MenuProps> = ({ title, items, isOpen, color, onToggle }) =>
                         },
                     },
                 }}
-                style={{ backgroundColor: color, pointerEvents: isOpen ? "auto" : "none" }}
-                className="text-start text-xl px-12 py-8 my-4 space-y-4"
+                style={{ backgroundColor: "rgb(102,101,221,15%)", pointerEvents: isOpen ? "auto" : "none" }}
+                className="text-start text-xl px-12 py-8 my-4 space-y-6"
             >
-                {items.map((item, index) => (
-                    <motion.li key={index} variants={itemVariants}>
+                <h1 style={{color: "rgb(102,101,221,75%)" }} className="text-3xl font-bold">Niveau 1 :</h1>
+                {items1.map((item, index) => (
+                    <motion.li key={index} variants={itemVariants} style={{backgroundColor: color}} className="p-2 text-white rounded-lg shadow-sm">
+                        {item}
+                    </motion.li>
+                ))}
+                <h1 style={{color: "rgb(102,101,221,75%)" }} className="text-3xl  font-bold">Niveau 2 :</h1>
+                {items2.map((item, index) => (
+                    <motion.li key={index} variants={itemVariants} style={{backgroundColor: color}} className="p-2 text-white rounded-lg shadow-sm">
                         {item}
                     </motion.li>
                 ))}
@@ -129,7 +154,7 @@ const DraggableImage: React.FC<{key:number; src: string; alt: string; width: num
     return (
         <motion.div
             drag
-            dragConstraints={{ left: 0, right: 1100 - width, top: 0, bottom: 780 - height }}
+            dragConstraints={{ left: 0, right: 1300 - width, top: 0, bottom: 780 - height }}
             dragElastic={0.2}
             style={{ x: position.x, y: position.y }}
             onDragEnd={handleDragEnd}
@@ -249,7 +274,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                     <h1 className="text-6xl text-white font-bold">Technologies utilisées</h1>
                     <h1 className="text-3xl text-white">Essayez d'attraper une technologie et de la bouger.</h1>
 
-                <div className="bg-white m-auto w-[1100px] h-[800px] rounded-3xl relative overflow-hidden">  {images.map((image, index) => (
+                <div className="bg-white m-auto w-[1300px] h-[800px] rounded-3xl relative overflow-hidden">  {images.map((image, index) => (
                     <DraggableImage
                         key={index}
                         src={image.src}
@@ -267,15 +292,17 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 <div className="flex-col space-x-[25vw] justify-center">
                     <Menu
                         title="Réaliser un développement d’application"
-                        items={c1}
+                        items1={c1.n1}
+                        items2={c1.n2}
                         isOpen={isOpen.menu1}
                         color="#6665DD"
                         onToggle={() => handleToggle('menu1')}
                     />
-                    <div style={{marginTop: isOpen.menu1 ? '35%' : '7%'}}>
+                    <div style={{marginTop: isOpen.menu1 ? '215%' : '7%'}}>
                         <Menu
                             title="Optimiser des applications"
-                            items={c2}
+                            items1={c2.n1}
+                            items2={c2.n2}
                             isOpen={isOpen.menu2}
                             color="#9B9ECE"
                             onToggle={() => handleToggle('menu2')}
@@ -283,24 +310,66 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                     </div>
                 </div>
             </div>
-            <div style={{marginTop: isOpen.menu2 ? '28%' : '0'}} className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-10 space-y-12">
-                <h1 className="text-6xl  text-white font-bold ">Tâches accomplies</h1>
+            <div style={{marginTop: isOpen.menu2 ? '155%' : '0'}}
+                 className="w-full h-[1200px] text-center bg-[#6665DD] px-[200px] py-10 space-y-12">
+                <div className="space-y-4">
+                    <h1 className="text-6xl  text-white font-bold ">Tâches accomplies</h1>
+                    <h1 className="text-3xl  text-white ">Cliquez sur une tâche pour pouvoir voir les détails de la tâche.</h1>
+
+                </div>
+
+
                 <Fenetre></Fenetre>
             </div>
+{/*            <div className="mx-44 mt-12">
+                <h1 className=" text-6xl text-start  text-[#6665DD] font-bold pb-8 ">Compétences</h1>
+                <div className="mx-24">
+                    <h1 className=" text-4xl text-start  text-[#6665DD] font-bold pb-8 ">Compétences 1</h1>
+                    <ul
+                        className="text-start text-xl px-12 space-y-4 overflow-y-auto flex-grow"
+                    >
+                        {c1.map((item, index) => (
+                            <li key={index}
+                                className="p-2 bg-[#6665DD] text-white rounded-lg shadow-sm">
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+
+                </div>
+                <div className="mx-24 mt-12">
+                    <h1 className=" text-4xl text-start  text-[#6665DD] font-bold pb-8 ">Compétences 2</h1>
+
+                    <ul
+                        className="text-start text-xl px-12 space-y-4 overflow-y-auto flex-grow"
+                    >
+                        {c2.map((item, index) => (
+                            <li key={index}
+                                className="p-2 bg-[#6665DD] text-white rounded-lg shadow-sm">
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+
+                </div>
+
+            </div>*/}
             <div className="mx-44 mt-12">
                 <h1 className=" text-6xl text-center  text-[#6665DD] font-bold pb-8 ">Accéder au projet</h1>
 
                 <div className="mt-16 space-y-12 items-center mx-44">
 
-                    <a className="flex space-x-8 px-8 py-8 bg-gray-600 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75" href="https://github.com/mhammeDev/EASING" target="_blank">
+                    <a className="flex space-x-8 px-8 py-8 bg-gray-600 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75"
+                       href="https://github.com/mhammeDev/EASING" target="_blank">
                         <FaGithub/>
                         <p className="e ">Github</p>
                     </a>
 
-                        <a className="flex space-x-8 px-8 py-8 bg-blue-700 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75" href="https://hub.docker.com/repository/docker/mhammedev/easingproject/" target="_blank">
-                            <FaDocker/>
-                            <p className="text-3xl text-white ">Docker</p>
-                        </a>
+                    <a className="flex space-x-8 px-8 py-8 bg-blue-700 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75"
+                       href="https://hub.docker.com/repository/docker/mhammedev/easingproject/" target="_blank">
+                        <FaDocker/>
+                        <p className="text-3xl text-white ">Docker</p>
+                    </a>
 
                 </div>
 
