@@ -42,12 +42,12 @@ const c2 =
         "AC 2.4 Évaluer l’impact environnemental et sociétal des solutions proposées : Bien que cette compétence n'ait pas été directement intégrée dans mon travail, j'ai pris des mesures pour optimiser les perfomances de l'application."]}
 
 const images = [
-    { src: "/img/easing_picture/node.png", x: 0, y: 0 },
-    { src: "/img/easing_picture/mongo.png", x: 200, y: 100 },
-    { src: "/img/easing_picture/js.png", x: 400, y: 200 },
-    { src: "/img/easing_picture/vue.png", x: 600, y: 300 },
-    { src: "/img/easing_picture/docker.png", x: 800, y: 400 },
-    { src: "/img/easing_picture/open_ai.jpg", x: 1000, y: 500 },
+    { src: "/img/easing_picture/node.png", x: 25, y: 0 },
+    { src: "/img/easing_picture/mongo.png", x: 150, y: 100 },
+    { src: "/img/easing_picture/js.png", x: 350, y: 200 },
+    { src: "/img/easing_picture/vue.png", x: 500, y: 300 },
+    { src: "/img/easing_picture/docker.png", x: 650, y: 400 },
+    { src: "/img/easing_picture/open_ai.jpg", x: 800, y: 500 },
 
 ];
 
@@ -77,7 +77,7 @@ const Menu: React.FC<MenuProps> = ({ title, items1, items2, isOpen, color, onTog
             initial={false}
             animate={isOpen ? "open" : "closed"}
             style={{ backgroundColor: color }}
-            className="menu w-[1000px] h-[200px] rounded-3xl text-white my-12"
+            className="menu w-[60vw] h-[200px] rounded-3xl text-white my-12"
         >
             <motion.button
                 whileTap={{ scale: 0.97 }}
@@ -154,7 +154,7 @@ const DraggableImage: React.FC<{key:number; src: string; alt: string; width: num
     return (
         <motion.div
             drag
-            dragConstraints={{ left: 0, right: 1300 - width, top: 0, bottom: 780 - height }}
+            dragConstraints={{ left: 0, right: 1100 - width, top: 0, bottom: 780 - height }}
             dragElastic={0.2}
             style={{ x: position.x, y: position.y }}
             onDragEnd={handleDragEnd}
@@ -212,7 +212,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 <MacbookScroll></MacbookScroll>
             </div>
             <div
-                className=" bg-[#6665DD] w-screen mt-[-23%]  py-6 ">
+                className=" bg-[#6665DD] w-screen py-6 mt-[-40vh] ">
                 <motion.div
                     className="flex items-center  text-white space-x-12 justify-center"
                     variants={container}
@@ -243,7 +243,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 </motion.div>
             </div>
 
-            <div className="mx-44 my-8 ">
+            <div className="mx-36 my-8 ">
 
                 <div className="my-32 ">
                     <h1 className="text-6xl  text-[#6665DD] font-bold ">Le projet</h1>
@@ -270,11 +270,11 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 </div>
             </div>
 
-            <div className=" my-16 bg-[#6665DD] w-screen px-[200px] py-8 space-y-12">
+            <div className=" my-16 bg-[#6665DD] w-screen px-[100px] py-8 space-y-12">
                     <h1 className="text-6xl text-white font-bold">Technologies utilisées</h1>
                     <h1 className="text-3xl text-white">Essayez d'attraper une technologie et de la bouger.</h1>
 
-                <div className="bg-white m-auto w-[1300px] h-[800px] rounded-3xl relative overflow-hidden">  {images.map((image, index) => (
+                <div className="bg-white m-auto w-[1100px] h-[800px] rounded-3xl relative overflow-hidden">  {images.map((image, index) => (
                     <DraggableImage
                         key={index}
                         src={image.src}
@@ -287,7 +287,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 ))}
                 </div>
             </div>
-            <div className="mx-44 mb-28">
+            <div className="mx-36 mb-28">
                 <h1 className="text-6xl  text-[#6665DD] font-bold pb-8 ">Compétences sollicitées</h1>
                 <div className="flex-col space-x-[25vw] justify-center">
                     <Menu
@@ -321,7 +321,7 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
 
                 <Fenetre></Fenetre>
             </div>
-{/*            <div className="mx-44 mt-12">
+{/*            <div className="mx-36 mt-12">
                 <h1 className=" text-6xl text-start  text-[#6665DD] font-bold pb-8 ">Compétences</h1>
                 <div className="mx-24">
                     <h1 className=" text-4xl text-start  text-[#6665DD] font-bold pb-8 ">Compétences 1</h1>
@@ -354,10 +354,10 @@ const Home: React.FC<HomeProps> = ({params: {lang}}) => {
                 </div>
 
             </div>*/}
-            <div className="mx-44 mt-12">
+            <div className="mx-36 mt-12">
                 <h1 className=" text-6xl text-center  text-[#6665DD] font-bold pb-8 ">Accéder au projet</h1>
 
-                <div className="mt-16 space-y-12 items-center mx-44">
+                <div className="mt-16 space-y-12 items-center mx-36">
 
                     <a className="flex space-x-8 px-8 py-8 bg-gray-600 text-3xl text-white justify-center  rounded-2xl hover:cursor-pointer hover:opacity-75"
                        href="https://github.com/mhammeDev/EASING" target="_blank">

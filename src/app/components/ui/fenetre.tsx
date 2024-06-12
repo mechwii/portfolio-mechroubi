@@ -90,7 +90,7 @@ const swipePower = (offset: number, velocity: number) => Math.abs(offset) * velo
 
 const Rectangle: React.FC<RectangleProps> = ({ id, name, onClick }) => (
     <motion.div
-        className="w-[480px] h-[180px] px-12 bg-white rounded-lg flex items-center justify-center cursor-pointer shadow-md text-2xl"
+        className="w-[450px] h-[180px] px-12 bg-white rounded-lg flex items-center justify-center cursor-pointer shadow-md text-2xl"
         onClick={() => onClick(id)}
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.05 }}

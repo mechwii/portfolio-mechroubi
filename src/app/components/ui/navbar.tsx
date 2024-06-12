@@ -19,7 +19,7 @@ export const Navbar = (() => {
             </motion.div>
 
             <motion.div
-                className="flex text-white text-2xl w-2/5 justify-between"
+                className="flex text-white text-2xl w-1/2 justify-between"
                 initial={{x: 180, opacity: 0}}
                 animate={{x: 0, opacity: 1}}
                 transition={{type: "spring", stiffness: 80}}
