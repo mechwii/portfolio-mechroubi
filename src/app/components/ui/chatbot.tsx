@@ -18,7 +18,7 @@ export const Chatbot = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const messages: Message[] = [
-        { expediteur: "Momo", text: "J’ai beaucoup aimé ce stage, on peut dire que c’est ma meilleure expérience de stage (après c’est la seule). J’ai particulièrement aimé ce stage puisque je devais faire preuve d’autonomie la plupart du temps, cela m'a permis de travailler sur cela mais aussi de faire parler ma créativité. En plus de cela je trouvais le sujet vraiment intéressant donc j’ai pris du plaisir à réaliser les missions qui m’ont été confiées. Même si je n’ai pas vraiment ressenti l’aspect entreprise, l’atmosphère avec mon tuteur, les enseignants et les autres élèves était vraiment bonne." },
+        { expediteur: "Momo", text: "J’ai beaucoup aimé ce stage, on peut dire que c’est ma meilleure expérience de stage (après c’est la seule). J’ai particulièrement aimé ce stage puisque je devais faire preuve d’autonomie la plupart du temps, cela m'a permis de travailler sur cette qualité mais aussi de faire parler ma créativité. En plus de cela je trouvais le sujet vraiment intéressant donc j’ai pris du plaisir à réaliser les missions qui m’ont été confiées. Même si je n’ai pas vraiment ressenti l’aspect entreprise, l’atmosphère avec mon tuteur, les enseignants et les autres élèves était vraiment bonne." },
         { expediteur: "me", text: "Ce stage t’as t’il été bénéfique ? Et qu’as tu appris ?" },
         { expediteur: "Momo", text: "Oui ce stage m’a beaucoup été bénéfique puisque dans un premier temps puisque j’ai du concevoir la solution de A à Z j’ai pu renforcer mes compétences que j’avais déjà, mais en plus de ça je me suis plongé dans des “choses” que je ne connaissais pas, faisant des docs mes meilleurs amis, j’ai pu comprendre le prompt engineering mais aussi docker et encore pleins de choses, des notions qu’on aborde pas forcément maintenant." },
         { expediteur: "me", text: "Pense tu que as pu mettre en pratique les connaissances acquises en BUT ?" },
@@ -26,7 +26,7 @@ export const Chatbot = () => {
         { expediteur: "me", text: "Es-tu satisfait de ce que tu as pu fournir ?" },
         { expediteur: "Momo", text: "Oui, je suis très satisfait de ce que j’ai pu fournir j’ai répondu aux maximums d’attentes qui m’étaient destinées, et les retours sur mon travail sont plutôt positifs donc je dirai que oui." },
         { expediteur: "me", text: "Y’a t’il des choses que tu changerais durant ce stage ?" },
-        { expediteur: "Momo", text: "Il n'y a pas vraiment de chose concrète que je changerai mais je pourrai améliorer mon code à certains endroits pour éviter la redondance, mais mise à part cela chaque démarche est passée par une étape de réflexion donc avant de faire chaque chose j’ai passé un certain temps à réfléchir." }
+        { expediteur: "Momo", text: "Il n'y a pas vraiment de choses que je changerai mais je pourrai améliorer mon code à certains endroits pour éviter la redondance, mais mise à part cela chaque démarche est passée par une étape de réflexion donc avant de faire chaque chose j’ai passé un certain temps à réfléchir." }
     ];
 
     useEffect(() => {
